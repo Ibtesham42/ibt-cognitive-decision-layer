@@ -1,0 +1,207 @@
+2026-04-01 22:10:00.757 | INFO     | ibtcode.system:__init__:30 - IbtcodeSystem initialised.
+2026-04-01 22:11:33.284 | INFO     | ibtcode.system:process:40 - ── Turn 1 ──────────────────────────────────
+2026-04-01 22:11:33.291 | DEBUG    | ibtcode.encoder:encode:137 - Encoded: I=unknown E=neutral(1) C=unknown U=1 UQ=0.40
+2026-04-01 22:11:33.291 | DEBUG    | ibtcode.state_engine:update_state:21 - First turn — no state smoothing applied.
+2026-04-01 22:11:33.291 | DEBUG    | ibtcode.reasoning:reasoning:37 - Reasoning: priority=1.00  UQ=0.40  escalate=False
+2026-04-01 22:11:33.292 | DEBUG    | ibtcode.decision:decide:37 - Decision: [normal → respond]
+2026-04-01 22:11:33.292 | DEBUG    | ibtcode.response:generate_response:58 - Response generated (normal)
+2026-04-01 22:11:33.292 | DEBUG    | ibtcode.memory:push:26 - Memory: 1/10 turns stored.
+2026-04-01 22:12:02.051 | INFO     | ibtcode.system:process:40 - ── Turn 2 ──────────────────────────────────
+2026-04-01 22:12:02.052 | DEBUG    | ibtcode.encoder:encode:137 - Encoded: I=command E=neutral(1) C=unknown U=1 UQ=0.40
+2026-04-01 22:12:02.052 | DEBUG    | ibtcode.state_engine:update_state:48 - StateUpdate: EL 1→1  T 0.50→0.50  K=0.00
+2026-04-01 22:12:02.053 | DEBUG    | ibtcode.reasoning:reasoning:37 - Reasoning: priority=1.00  UQ=0.40  escalate=False
+2026-04-01 22:12:02.053 | DEBUG    | ibtcode.decision:decide:37 - Decision: [normal → respond]
+2026-04-01 22:12:02.053 | DEBUG    | ibtcode.response:generate_response:58 - Response generated (normal)
+2026-04-01 22:12:02.053 | DEBUG    | ibtcode.memory:push:26 - Memory: 2/10 turns stored.
+2026-04-01 22:57:26.394 | INFO     | ibtcode.system:process:40 - ── Turn 3 ──────────────────────────────────
+2026-04-01 22:57:26.418 | DEBUG    | ibtcode.encoder:encode:137 - Encoded: I=unknown E=neutral(1) C=unknown U=1 UQ=0.50
+2026-04-01 22:57:26.418 | DEBUG    | ibtcode.state_engine:update_state:48 - StateUpdate: EL 1→1  T 0.50→0.50  K=0.00
+2026-04-01 22:57:26.418 | DEBUG    | ibtcode.reasoning:reasoning:37 - Reasoning: priority=1.00  UQ=0.50  escalate=False
+2026-04-01 22:57:26.418 | DEBUG    | ibtcode.decision:decide:37 - Decision: [normal → respond]
+2026-04-01 22:57:26.418 | DEBUG    | ibtcode.response:generate_response:58 - Response generated (normal)
+2026-04-01 22:57:26.418 | DEBUG    | ibtcode.memory:push:26 - Memory: 3/10 turns stored.
+2026-04-01 22:57:39.469 | INFO     | ibtcode.system:__init__:30 - IbtcodeSystem initialised.
+2026-04-01 22:57:43.125 | INFO     | ibtcode.system:process:40 - ── Turn 1 ──────────────────────────────────
+2026-04-01 22:57:43.125 | DEBUG    | ibtcode.encoder:encode:143 - Encoded: I=unknown E=neutral(1) C=unknown U=1 UQ=0.50
+2026-04-01 22:57:43.125 | DEBUG    | ibtcode.state_engine:update_state:21 - First turn — no state smoothing applied.
+2026-04-01 22:57:43.125 | DEBUG    | ibtcode.reasoning:reasoning:37 - Reasoning: priority=1.00  UQ=0.50  escalate=False
+2026-04-01 22:57:43.128 | DEBUG    | ibtcode.decision:decide:37 - Decision: [normal → respond]
+2026-04-01 22:57:43.128 | DEBUG    | ibtcode.response:generate_response:58 - Response generated (normal)
+2026-04-01 22:57:43.128 | DEBUG    | ibtcode.memory:push:26 - Memory: 1/10 turns stored.
+2026-04-01 22:59:00.695 | INFO     | ibtcode.system:__init__:30 - IbtcodeSystem initialised.
+2026-04-01 22:59:06.184 | INFO     | ibtcode.system:process:40 - ── Turn 1 ──────────────────────────────────
+2026-04-01 22:59:06.184 | DEBUG    | ibtcode.encoder:encode:152 - Encoded: I=unknown E=neutral(1) C=unknown U=1 UQ=0.50
+2026-04-01 22:59:06.184 | DEBUG    | ibtcode.state_engine:update_state:21 - First turn — no state smoothing applied.
+2026-04-01 22:59:06.184 | DEBUG    | ibtcode.reasoning:reasoning:37 - Reasoning: priority=1.00  UQ=0.50  escalate=False
+2026-04-01 22:59:06.202 | DEBUG    | ibtcode.decision:decide:37 - Decision: [normal → respond]
+2026-04-01 22:59:06.202 | DEBUG    | ibtcode.response:generate_response:58 - Response generated (normal)
+2026-04-01 22:59:06.202 | DEBUG    | ibtcode.memory:push:26 - Memory: 1/10 turns stored.
+2026-04-01 23:01:14.893 | INFO     | ibtcode.system:process:40 - ── Turn 2 ──────────────────────────────────
+2026-04-01 23:01:14.911 | DEBUG    | ibtcode.encoder:encode:152 - Encoded: I=command E=angry(3) C=general U=3 UQ=0.10
+2026-04-01 23:01:14.911 | DEBUG    | ibtcode.state_engine:update_state:48 - StateUpdate: EL 3→2  T 0.50→0.50  K=0.60
+2026-04-01 23:01:14.911 | DEBUG    | ibtcode.reasoning:reasoning:26 - High contradiction (0.60) → UQ boosted to 0.40
+2026-04-01 23:01:14.911 | DEBUG    | ibtcode.reasoning:reasoning:37 - Reasoning: priority=2.70  UQ=0.40  escalate=False
+2026-04-01 23:01:14.911 | DEBUG    | ibtcode.decision:decide:37 - Decision: [normal → respond]
+2026-04-01 23:01:14.911 | DEBUG    | ibtcode.response:generate_response:58 - Response generated (normal)
+2026-04-01 23:01:14.911 | DEBUG    | ibtcode.memory:push:26 - Memory: 2/10 turns stored.
+2026-04-01 23:01:25.649 | INFO     | ibtcode.system:process:40 - ── Turn 3 ──────────────────────────────────
+2026-04-01 23:01:25.649 | DEBUG    | ibtcode.encoder:encode:152 - Encoded: I=unknown E=neutral(1) C=unknown U=3 UQ=0.40
+2026-04-01 23:01:25.649 | DEBUG    | ibtcode.state_engine:update_state:48 - StateUpdate: EL 1→1  T 0.50→0.50  K=0.70
+2026-04-01 23:01:25.649 | DEBUG    | ibtcode.reasoning:reasoning:26 - High contradiction (0.70) → UQ boosted to 0.70
+2026-04-01 23:01:25.649 | DEBUG    | ibtcode.reasoning:reasoning:37 - Reasoning: priority=2.10  UQ=0.70  escalate=False
+2026-04-01 23:01:25.649 | DEBUG    | ibtcode.decision:decide:37 - Decision: [normal → respond]
+2026-04-01 23:01:25.649 | DEBUG    | ibtcode.response:generate_response:58 - Response generated (normal)
+2026-04-01 23:01:25.649 | DEBUG    | ibtcode.memory:push:26 - Memory: 3/10 turns stored.
+2026-04-01 23:03:35.377 | INFO     | ibtcode.system:process:40 - ── Turn 4 ──────────────────────────────────
+2026-04-01 23:03:35.398 | DEBUG    | ibtcode.encoder:encode:152 - Encoded: I=unknown E=neutral(1) C=unknown U=1 UQ=0.50
+2026-04-01 23:03:35.399 | DEBUG    | ibtcode.state_engine:update_state:48 - StateUpdate: EL 1→1  T 0.50→0.50  K=0.40
+2026-04-01 23:03:35.399 | DEBUG    | ibtcode.reasoning:reasoning:37 - Reasoning: priority=1.00  UQ=0.50  escalate=False
+2026-04-01 23:03:35.399 | DEBUG    | ibtcode.decision:decide:37 - Decision: [normal → respond]
+2026-04-01 23:03:35.399 | DEBUG    | ibtcode.response:generate_response:58 - Response generated (normal)
+2026-04-01 23:03:35.399 | DEBUG    | ibtcode.memory:push:26 - Memory: 4/10 turns stored.
+2026-04-01 23:03:42.706 | INFO     | ibtcode.system:__init__:30 - IbtcodeSystem initialised.
+2026-04-01 23:03:45.190 | INFO     | ibtcode.system:process:40 - ── Turn 1 ──────────────────────────────────
+2026-04-01 23:03:45.191 | DEBUG    | ibtcode.encoder:encode:188 - Encoded: I=unknown E=angry(3) C=unknown U=1 UQ=0.20
+2026-04-01 23:03:45.191 | DEBUG    | ibtcode.state_engine:update_state:21 - First turn — no state smoothing applied.
+2026-04-01 23:03:45.192 | DEBUG    | ibtcode.reasoning:reasoning:37 - Reasoning: priority=1.90  UQ=0.20  escalate=False
+2026-04-01 23:03:45.192 | DEBUG    | ibtcode.decision:decide:37 - Decision: [normal → respond]
+2026-04-01 23:03:45.192 | DEBUG    | ibtcode.response:generate_response:58 - Response generated (normal)
+2026-04-01 23:03:45.192 | DEBUG    | ibtcode.memory:push:26 - Memory: 1/10 turns stored.
+2026-04-01 23:03:54.245 | INFO     | ibtcode.system:process:40 - ── Turn 2 ──────────────────────────────────
+2026-04-01 23:03:54.245 | DEBUG    | ibtcode.encoder:encode:188 - Encoded: I=unknown E=neutral(1) C=unknown U=1 UQ=0.65
+2026-04-01 23:03:54.245 | DEBUG    | ibtcode.state_engine:update_state:48 - StateUpdate: EL 1→1  T 0.50→0.50  K=0.30
+2026-04-01 23:03:54.245 | DEBUG    | ibtcode.reasoning:reasoning:37 - Reasoning: priority=1.00  UQ=0.65  escalate=False
+2026-04-01 23:03:54.245 | DEBUG    | ibtcode.decision:decide:37 - Decision: [normal → respond]
+2026-04-01 23:03:54.245 | DEBUG    | ibtcode.response:generate_response:58 - Response generated (normal)
+2026-04-01 23:03:54.245 | DEBUG    | ibtcode.memory:push:26 - Memory: 2/10 turns stored.
+2026-04-01 23:04:15.692 | INFO     | ibtcode.system:process:40 - ── Turn 3 ──────────────────────────────────
+2026-04-01 23:04:15.700 | DEBUG    | ibtcode.encoder:encode:188 - Encoded: I=unknown E=frustrated(2) C=unknown U=1 UQ=0.20
+2026-04-01 23:04:15.700 | DEBUG    | ibtcode.state_engine:update_state:48 - StateUpdate: EL 2→1  T 0.50→0.50  K=0.30
+2026-04-01 23:04:15.701 | DEBUG    | ibtcode.reasoning:reasoning:37 - Reasoning: priority=1.00  UQ=0.20  escalate=False
+2026-04-01 23:04:15.701 | DEBUG    | ibtcode.decision:decide:37 - Decision: [support → give_solution]
+2026-04-01 23:04:15.701 | DEBUG    | ibtcode.response:generate_response:58 - Response generated (support)
+2026-04-01 23:04:15.701 | DEBUG    | ibtcode.memory:push:26 - Memory: 3/10 turns stored.
+2026-04-01 23:07:15.834 | INFO     | ibtcode.system:process:40 - ── Turn 4 ──────────────────────────────────
+2026-04-01 23:07:15.868 | DEBUG    | ibtcode.encoder:encode:188 - Encoded: I=complaint E=happy(1) C=unknown U=1 UQ=0.10
+2026-04-01 23:07:15.868 | DEBUG    | ibtcode.state_engine:update_state:48 - StateUpdate: EL 1→1  T 0.50→0.50  K=0.30
+2026-04-01 23:07:15.868 | DEBUG    | ibtcode.reasoning:reasoning:37 - Reasoning: priority=1.00  UQ=0.10  escalate=False
+2026-04-01 23:07:15.868 | DEBUG    | ibtcode.decision:decide:37 - Decision: [support → give_solution]
+2026-04-01 23:07:15.868 | DEBUG    | ibtcode.response:generate_response:58 - Response generated (support)
+2026-04-01 23:07:15.868 | DEBUG    | ibtcode.memory:push:26 - Memory: 4/10 turns stored.
+2026-04-01 23:07:40.832 | INFO     | ibtcode.system:process:40 - ── Turn 5 ──────────────────────────────────
+2026-04-01 23:07:40.835 | DEBUG    | ibtcode.encoder:encode:188 - Encoded: I=unknown E=frustrated(2) C=unknown U=1 UQ=0.20
+2026-04-01 23:07:40.835 | DEBUG    | ibtcode.state_engine:update_state:48 - StateUpdate: EL 2→1  T 0.50→0.50  K=0.30
+2026-04-01 23:07:40.835 | DEBUG    | ibtcode.reasoning:reasoning:37 - Reasoning: priority=1.00  UQ=0.20  escalate=False
+2026-04-01 23:07:40.835 | DEBUG    | ibtcode.decision:decide:37 - Decision: [support → give_solution]
+2026-04-01 23:07:40.835 | DEBUG    | ibtcode.response:generate_response:58 - Response generated (support)
+2026-04-01 23:07:40.835 | DEBUG    | ibtcode.memory:push:26 - Memory: 5/10 turns stored.
+2026-04-01 23:10:51.327 | INFO     | ibtcode.system:process:40 - ── Turn 6 ──────────────────────────────────
+2026-04-01 23:10:51.337 | DEBUG    | ibtcode.encoder:encode:188 - Encoded: I=unknown E=neutral(1) C=unknown U=1 UQ=0.50
+2026-04-01 23:10:51.337 | DEBUG    | ibtcode.state_engine:update_state:48 - StateUpdate: EL 1→1  T 0.50→0.50  K=0.30
+2026-04-01 23:10:51.337 | DEBUG    | ibtcode.reasoning:reasoning:37 - Reasoning: priority=1.00  UQ=0.50  escalate=False
+2026-04-01 23:10:51.337 | DEBUG    | ibtcode.decision:decide:37 - Decision: [normal → respond]
+2026-04-01 23:10:51.337 | DEBUG    | ibtcode.response:generate_response:58 - Response generated (normal)
+2026-04-01 23:10:51.337 | DEBUG    | ibtcode.memory:push:26 - Memory: 6/10 turns stored.
+2026-04-01 23:12:31.120 | INFO     | ibtcode.system:process:40 - ── Turn 7 ──────────────────────────────────
+2026-04-01 23:12:31.120 | DEBUG    | ibtcode.encoder:encode:188 - Encoded: I=question E=frustrated(2) C=unknown U=1 UQ=0.20
+2026-04-01 23:12:31.120 | DEBUG    | ibtcode.state_engine:update_state:48 - StateUpdate: EL 2→1  T 0.50→0.50  K=0.30
+2026-04-01 23:12:31.120 | DEBUG    | ibtcode.reasoning:reasoning:37 - Reasoning: priority=1.00  UQ=0.20  escalate=False
+2026-04-01 23:12:31.120 | DEBUG    | ibtcode.decision:decide:37 - Decision: [support → give_solution]
+2026-04-01 23:12:31.120 | DEBUG    | ibtcode.response:generate_response:58 - Response generated (support)
+2026-04-01 23:12:31.120 | DEBUG    | ibtcode.memory:push:26 - Memory: 7/10 turns stored.
+2026-04-01 23:12:57.029 | INFO     | ibtcode.system:__init__:30 - IbtcodeSystem initialised.
+2026-04-01 23:13:09.165 | INFO     | ibtcode.system:__init__:30 - IbtcodeSystem initialised.
+2026-04-01 23:13:18.875 | INFO     | ibtcode.system:process:40 - ── Turn 1 ──────────────────────────────────
+2026-04-01 23:13:26.344 | INFO     | ibtcode.system:__init__:30 - IbtcodeSystem initialised.
+2026-04-01 23:13:30.394 | INFO     | ibtcode.system:process:40 - ── Turn 1 ──────────────────────────────────
+2026-04-01 23:16:27.702 | INFO     | ibtcode.system:__init__:30 - IbtcodeSystem initialised.
+2026-04-01 23:16:56.111 | INFO     | ibtcode.system:process:40 - ── Turn 1 ──────────────────────────────────
+2026-04-01 23:16:56.132 | DEBUG    | ibtcode.encoder:encode:216 - I=question E=frustrated L=3 Hidden=frustrated Sarcasm=False
+2026-04-01 23:16:56.132 | DEBUG    | ibtcode.state_engine:update_state:21 - First turn — no state smoothing applied.
+2026-04-01 23:16:56.132 | DEBUG    | ibtcode.reasoning:reasoning:37 - Reasoning: priority=1.60  UQ=0.00  escalate=False
+2026-04-01 23:16:56.132 | DEBUG    | ibtcode.decision:decide:37 - Decision: [support → give_solution]
+2026-04-01 23:16:56.132 | DEBUG    | ibtcode.response:generate_response:58 - Response generated (support)
+2026-04-01 23:16:56.132 | DEBUG    | ibtcode.memory:push:26 - Memory: 1/10 turns stored.
+2026-04-01 23:17:31.314 | INFO     | ibtcode.system:process:40 - ── Turn 2 ──────────────────────────────────
+2026-04-01 23:17:31.315 | DEBUG    | ibtcode.encoder:encode:216 - I=complaint E=neutral L=3 Hidden=neutral Sarcasm=False
+2026-04-01 23:17:31.315 | DEBUG    | ibtcode.state_engine:update_state:48 - StateUpdate: EL 3→3  T 0.50→0.50  K=0.30
+2026-04-01 23:17:31.315 | DEBUG    | ibtcode.reasoning:reasoning:37 - Reasoning: priority=1.60  UQ=0.10  escalate=False
+2026-04-01 23:17:31.316 | DEBUG    | ibtcode.decision:decide:37 - Decision: [support → give_solution]
+2026-04-01 23:17:31.316 | DEBUG    | ibtcode.response:generate_response:58 - Response generated (support)
+2026-04-01 23:17:31.316 | DEBUG    | ibtcode.memory:push:26 - Memory: 2/10 turns stored.
+2026-04-01 23:25:21.898 | INFO     | ibtcode.system:process:40 - ── Turn 3 ──────────────────────────────────
+2026-04-01 23:25:21.931 | DEBUG    | ibtcode.encoder:encode:216 - I=complaint E=neutral L=3 Hidden=neutral Sarcasm=False
+2026-04-01 23:25:21.932 | DEBUG    | ibtcode.state_engine:update_state:48 - StateUpdate: EL 3→3  T 0.50→0.50  K=0.00
+2026-04-01 23:25:21.932 | DEBUG    | ibtcode.reasoning:reasoning:37 - Reasoning: priority=1.60  UQ=0.10  escalate=False
+2026-04-01 23:25:21.932 | DEBUG    | ibtcode.decision:decide:37 - Decision: [support → give_solution]
+2026-04-01 23:25:21.932 | DEBUG    | ibtcode.response:generate_response:58 - Response generated (support)
+2026-04-01 23:25:21.934 | DEBUG    | ibtcode.memory:push:26 - Memory: 3/10 turns stored.
+2026-04-01 23:25:26.905 | INFO     | ibtcode.system:__init__:30 - IbtcodeSystem initialised.
+2026-04-01 23:25:31.206 | INFO     | ibtcode.system:process:40 - ── Turn 1 ──────────────────────────────────
+2026-04-01 23:25:31.206 | DEBUG    | ibtcode.encoder:encode:237 - I=complaint E=frustrated L=3 Hidden=frustrated Sarcasm=False
+2026-04-01 23:25:31.206 | DEBUG    | ibtcode.state_engine:update_state:21 - First turn — no state smoothing applied.
+2026-04-01 23:25:31.206 | DEBUG    | ibtcode.reasoning:reasoning:37 - Reasoning: priority=1.60  UQ=0.10  escalate=False
+2026-04-01 23:25:31.206 | DEBUG    | ibtcode.decision:decide:37 - Decision: [support → give_solution]
+2026-04-01 23:25:31.206 | DEBUG    | ibtcode.response:generate_response:58 - Response generated (support)
+2026-04-01 23:25:31.206 | DEBUG    | ibtcode.memory:push:26 - Memory: 1/10 turns stored.
+2026-04-01 23:25:51.171 | INFO     | ibtcode.system:process:40 - ── Turn 2 ──────────────────────────────────
+2026-04-01 23:25:51.171 | DEBUG    | ibtcode.encoder:encode:237 - I=unknown E=frustrated L=3 Hidden=frustrated Sarcasm=False
+2026-04-01 23:25:51.172 | DEBUG    | ibtcode.state_engine:update_state:48 - StateUpdate: EL 3→3  T 0.50→0.50  K=0.00
+2026-04-01 23:25:51.172 | DEBUG    | ibtcode.reasoning:reasoning:37 - Reasoning: priority=1.60  UQ=0.49  escalate=False
+2026-04-01 23:25:51.172 | DEBUG    | ibtcode.decision:decide:37 - Decision: [support → give_solution]
+2026-04-01 23:25:51.172 | DEBUG    | ibtcode.response:generate_response:58 - Response generated (support)
+2026-04-01 23:25:51.172 | DEBUG    | ibtcode.memory:push:26 - Memory: 2/10 turns stored.
+2026-04-01 23:30:00.537 | INFO     | ibtcode.system:__init__:30 - IbtcodeSystem initialised.
+2026-04-01 23:30:01.936 | INFO     | ibtcode.system:process:40 - ── Turn 1 ──────────────────────────────────
+2026-04-01 23:30:01.936 | DEBUG    | ibtcode.encoder:encode:237 - I=question E=frustrated L=3 Hidden=frustrated Sarcasm=False
+2026-04-01 23:30:01.936 | DEBUG    | ibtcode.state_engine:update_state:21 - First turn — no state smoothing applied.
+2026-04-01 23:30:01.936 | DEBUG    | ibtcode.reasoning:reasoning:37 - Reasoning: priority=1.60  UQ=0.00  escalate=False
+2026-04-01 23:30:01.936 | DEBUG    | ibtcode.decision:decide:50 - Decision: [support → give_solution]
+2026-04-01 23:30:01.936 | DEBUG    | ibtcode.response:generate_response:58 - Response generated (support)
+2026-04-01 23:30:01.936 | DEBUG    | ibtcode.memory:push:26 - Memory: 1/10 turns stored.
+2026-04-01 23:30:16.820 | INFO     | ibtcode.system:process:40 - ── Turn 2 ──────────────────────────────────
+2026-04-01 23:30:16.821 | DEBUG    | ibtcode.encoder:encode:237 - I=unknown E=neutral L=3 Hidden=neutral Sarcasm=False
+2026-04-01 23:30:16.821 | DEBUG    | ibtcode.state_engine:update_state:48 - StateUpdate: EL 3→3  T 0.50→0.50  K=0.30
+2026-04-01 23:30:16.821 | DEBUG    | ibtcode.reasoning:reasoning:37 - Reasoning: priority=1.60  UQ=0.10  escalate=False
+2026-04-01 23:30:16.821 | DEBUG    | ibtcode.decision:decide:50 - Decision: [normal → respond]
+2026-04-01 23:30:16.821 | DEBUG    | ibtcode.response:generate_response:58 - Response generated (normal)
+2026-04-01 23:30:16.821 | DEBUG    | ibtcode.memory:push:26 - Memory: 2/10 turns stored.
+2026-04-02 00:02:37.495 | INFO     | ibtcode.system:__init__:30 - IbtcodeSystem initialised.
+2026-04-02 00:02:45.417 | INFO     | ibtcode.system:process:40 - ── Turn 1 ──────────────────────────────────
+2026-04-02 00:02:45.419 | DEBUG    | ibtcode.encoder:_normalize:66 - Normalized: 'helo dear' → 'helo dear'
+2026-04-02 00:02:45.429 | DEBUG    | ibtcode.encoder:encode:546 - Encoded: I=unknown E=neutral L=5 Context=unknown Risk=1 Priority=0.4
+2026-04-02 00:02:45.429 | DEBUG    | ibtcode.state_engine:update_state:21 - First turn — no state smoothing applied.
+2026-04-02 00:02:45.429 | DEBUG    | ibtcode.reasoning:reasoning:37 - Reasoning: priority=2.20  UQ=0.67  escalate=False
+2026-04-02 00:07:49.896 | INFO     | ibtcode.system:__init__:30 - IbtcodeSystem initialised.
+2026-04-02 00:07:53.593 | INFO     | ibtcode.system:process:40 - ── Turn 1 ──────────────────────────────────
+2026-04-02 00:07:53.593 | DEBUG    | ibtcode.encoder:_normalize:66 - Normalized: 'hay dear' → 'hay dear'
+2026-04-02 00:07:53.596 | DEBUG    | ibtcode.encoder:encode:546 - Encoded: I=unknown E=neutral L=5 Context=unknown Risk=1 Priority=0.4
+2026-04-02 00:07:53.596 | DEBUG    | ibtcode.state_engine:update_state:21 - First turn — no state smoothing applied.
+2026-04-02 00:07:53.596 | DEBUG    | ibtcode.reasoning:reasoning:37 - Reasoning: priority=2.20  UQ=0.67  escalate=True
+2026-04-02 00:07:53.596 | DEBUG    | ibtcode.decision:decide:214 - Decision made: clarify → ask_question (conf: 0.67) - Uncertainty: 0.67, confused: 0.00
+2026-04-02 00:07:53.596 | DEBUG    | ibtcode.response:generate_response:58 - Response generated (clarify)
+2026-04-02 00:07:53.596 | DEBUG    | ibtcode.memory:push:26 - Memory: 1/10 turns stored.
+2026-04-02 00:11:48.200 | INFO     | ibtcode.system:__init__:30 - IbtcodeSystem initialised.
+2026-04-02 00:11:51.101 | INFO     | ibtcode.system:process:40 - ── Turn 1 ──────────────────────────────────
+2026-04-02 00:11:51.105 | DEBUG    | ibtcode.encoder:_normalize:66 - Normalized: 'hay dear' → 'hay dear'
+2026-04-02 00:11:51.117 | DEBUG    | ibtcode.encoder:encode:554 - Encoded: I=unknown E=neutral L=5 Context=unknown Risk=1 Priority=0.25
+2026-04-02 00:11:51.117 | DEBUG    | ibtcode.state_engine:update_state:21 - First turn — no state smoothing applied.
+2026-04-02 00:11:51.117 | DEBUG    | ibtcode.reasoning:reasoning:37 - Reasoning: priority=2.20  UQ=0.67  escalate=True
+2026-04-02 00:11:51.117 | DEBUG    | ibtcode.decision:decide:214 - Decision made: clarify → ask_question (conf: 0.67) - Uncertainty: 0.67, confused: 0.00
+2026-04-02 00:11:51.117 | DEBUG    | ibtcode.response:generate_response:58 - Response generated (clarify)
+2026-04-02 00:11:51.117 | DEBUG    | ibtcode.memory:push:26 - Memory: 1/10 turns stored.
+2026-04-07 21:52:29.443 | INFO     | ibtcode.system:__init__:30 - IbtcodeSystem initialised.
+2026-04-07 21:52:33.985 | INFO     | ibtcode.system:process:40 - ── Turn 1 ──────────────────────────────────
+2026-04-07 21:52:33.990 | DEBUG    | ibtcode.encoder:_normalize:66 - Normalized: 'hello' → 'hello'
+2026-04-07 21:52:33.990 | DEBUG    | ibtcode.encoder:encode:554 - Encoded: I=greeting E=angry L=5 Context=unknown Risk=3 Priority=0.4
+2026-04-07 21:52:33.990 | DEBUG    | ibtcode.state_engine:update_state:21 - First turn — no state smoothing applied.
+2026-04-07 21:52:33.990 | DEBUG    | ibtcode.reasoning:reasoning:37 - Reasoning: priority=2.80  UQ=0.35  escalate=True
+2026-04-07 22:03:19.841 | INFO     | ibtcode.system:__init__:30 - IbtcodeSystem initialised.
+2026-04-07 22:03:21.780 | INFO     | ibtcode.system:process:40 - ── Turn 1 ──────────────────────────────────
+2026-04-07 22:03:21.780 | DEBUG    | ibtcode.encoder:_normalize:66 - Normalized: 'hay' → 'hay'
+2026-04-07 22:03:21.780 | DEBUG    | ibtcode.encoder:encode:554 - Encoded: I=unknown E=neutral L=5 Context=unknown Risk=1 Priority=0.25
+2026-04-07 22:03:21.780 | DEBUG    | ibtcode.state_engine:update_state:21 - First turn — no state smoothing applied.
+2026-04-07 22:03:21.780 | DEBUG    | ibtcode.reasoning:reasoning:37 - Reasoning: priority=2.20  UQ=0.67  escalate=True
+2026-04-07 22:03:21.796 | DEBUG    | ibtcode.decision:decide:214 - Decision made: clarify → ask_question (conf: 0.67) - Uncertainty: 0.67, confused: 0.00
+2026-04-07 22:03:21.796 | DEBUG    | ibtcode.response:generate_response:58 - Response generated (clarify)
+2026-04-07 22:03:21.796 | DEBUG    | ibtcode.memory:push:26 - Memory: 1/10 turns stored.
