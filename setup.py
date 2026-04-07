@@ -13,7 +13,7 @@ with open("requirements.txt", "r", encoding="utf-8") as fh:
 
 setup(
     name="ibt-cognitive-decision-layer",
-    version="1.0.0",
+    version="1.0.1",
     author="Ibtesham Akhtar",
     author_email="ibtesham.akhtar@example.com",
     description="Production-grade cognitive decision engine for AI systems with emotion awareness and reasoning",

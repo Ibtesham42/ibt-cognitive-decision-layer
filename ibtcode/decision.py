@@ -15,11 +15,9 @@ def _p(state: IbtcodeState, emotion: Emotion) -> float:
     Fix: EmotionVector is a Pydantic model, not a dict.
     """
     try:
-        # Convert emotion to string and access as attribute
         emotion_str = emotion.value
         return getattr(state.emotion_vector, emotion_str, 0.0)
     except AttributeError:
-        # Fallback to dict conversion if attribute access fails
         try:
             return state.emotion_vector.to_dict().get(emotion.value, 0.0)
         except:
@@ -31,10 +29,34 @@ def _get_effective_emotion(state: IbtcodeState) -> Emotion:
     """
     Get effective emotion considering sarcasm.
     If sarcasm, use hidden emotion; otherwise use detected emotion.
+    Handles both Emotion enum and string types.
     """
-    if state.sarcasm and state.hidden_emotion != Emotion.NEUTRAL:
-        return state.hidden_emotion
-    return state.emotion
+    # Handle detected emotion
+    detected_emotion = state.emotion
+    if isinstance(detected_emotion, str):
+        try:
+            detected_emotion = Emotion(detected_emotion)
+        except ValueError:
+            detected_emotion = Emotion.NEUTRAL
+    
+    # Handle hidden emotion
+    hidden_emotion = state.hidden_emotion
+    if isinstance(hidden_emotion, str):
+        try:
+            hidden_emotion = Emotion(hidden_emotion)
+        except ValueError:
+            hidden_emotion = Emotion.NEUTRAL
+    
+    if state.sarcasm and hidden_emotion != Emotion.NEUTRAL:
+        return hidden_emotion
+    return detected_emotion
+
+
+def _get_emotion_string(emotion: Emotion) -> str:
+    """Safely get emotion string value from Emotion enum or string."""
+    if hasattr(emotion, 'value'):
+        return emotion.value
+    return str(emotion)
 
 
 def _is_high_priority(state: IbtcodeState) -> bool:
@@ -103,13 +125,13 @@ def decide(state: IbtcodeState) -> Decision:
     
     # Get effective emotion (considering sarcasm)
     effective_emotion = _get_effective_emotion(state)
+    emotion_display = _get_emotion_string(effective_emotion)
     
     # Decision logic with priority order
     decision = None
     
     # 1. HIGHEST PRIORITY: De-escalation for angry/frustrated high-risk cases
     if _should_de_escalate(state, angry, frustrated, effective_emotion):
-        # Choose appropriate de-escalation action
         if state.urgency >= 4:
             action = Action.FIX_FAST
         elif state.risk >= 4:
@@ -121,12 +143,11 @@ def decide(state: IbtcodeState) -> Decision:
             strategy=Strategy.DE_ESCALATE,
             action=action,
             confidence=min(0.9, max(angry, frustrated)),
-            reasoning=f"High risk/priority with {effective_emotion.value} emotion"
+            reasoning=f"High risk or priority with {emotion_display} emotion"
         )
     
     # 2. HIGH PRIORITY: Clarify when confused or uncertain
     elif _should_clarify(state, confused, effective_emotion):
-        # Choose appropriate clarification action
         if state.clarity == "unclear":
             action = Action.ASK_QUESTION
         elif confused > 0.6:
@@ -143,7 +164,6 @@ def decide(state: IbtcodeState) -> Decision:
     
     # 3. MEDIUM PRIORITY: Support for frustrated/complaint cases
     elif _should_provide_support(state, frustrated):
-        # Choose appropriate support action
         if state.intent == "complaint":
             action = Action.GIVE_SOLUTION
         elif state.contradiction_score > 0.6:
@@ -173,7 +193,7 @@ def decide(state: IbtcodeState) -> Decision:
             strategy=Strategy.EMPATHIZE,
             action=Action.EMPATHIZE,
             confidence=max(sad, anxious),
-            reasoning=f"User showing {effective_emotion.value if effective_emotion else 'distress'} emotion"
+            reasoning=f"User showing distress or {emotion_display} emotion"
         )
     
     # 6. LOW PRIORITY: Apologize for errors
@@ -187,7 +207,6 @@ def decide(state: IbtcodeState) -> Decision:
     
     # 7. DEFAULT: Normal response
     else:
-        # Choose appropriate normal action
         if happy > 0.6:
             action = Action.RESPOND
         elif state.intent == "greeting":
@@ -207,19 +226,19 @@ def decide(state: IbtcodeState) -> Decision:
     # Add emotion context to reasoning
     if decision and state.emotion_vector:
         dominant_emotion = state.emotion_vector.get_dominant()
-        if dominant_emotion != Emotion.NEUTRAL and dominant_emotion.value not in decision.reasoning:
-            decision.reasoning += f", dominant emotion: {dominant_emotion.value}"
+        dominant_display = _get_emotion_string(dominant_emotion)
+        if dominant_emotion != Emotion.NEUTRAL and dominant_display not in decision.reasoning:
+            decision.reasoning += f", dominant emotion: {dominant_display}"
     
     # Log decision
     logger.debug(
-        f"Decision made: {decision.strategy.value} → {decision.action.value} "
+        f"Decision made: {decision.strategy.value} -> {decision.action.value} "
         f"(conf: {decision.confidence:.2f}) - {decision.reasoning}"
     )
     
     return decision
 
 
-# Additional helper function for batch decisions
 def decide_batch(states: list[IbtcodeState]) -> list[Decision]:
     """
     Make decisions for multiple states.
@@ -233,7 +252,6 @@ def decide_batch(states: list[IbtcodeState]) -> list[Decision]:
     return [decide(state) for state in states]
 
 
-# Helper function for decision validation
 def validate_decision(decision: Decision) -> bool:
     """
     Validate if decision is valid and actionable.
@@ -253,14 +271,13 @@ def validate_decision(decision: Decision) -> bool:
     if decision.confidence < 0:
         return False
     
-    # Check for invalid combinations
     invalid_combinations = [
         (Strategy.DE_ESCALATE, Action.RESPOND),
         (Strategy.CLARIFY, Action.ESCALATE_TO_HUMAN),
     ]
     
     if (decision.strategy, decision.action) in invalid_combinations:
-        logger.warning(f"Invalid decision combination: {decision.strategy} → {decision.action}")
+        logger.warning(f"Invalid decision combination: {decision.strategy} -> {decision.action}")
         return False
     
     return True
