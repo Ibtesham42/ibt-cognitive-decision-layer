@@ -1,8 +1,36 @@
 # Ibtcode Cognitive Decision Layer
 
+[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)]()
+[![License](https://img.shields.io/badge/License-MIT-green.svg)]()
+[![Status](https://img.shields.io/badge/Status-Active-success.svg)]()
+[![AI](https://img.shields.io/badge/AI-Decision%20Layer-purple.svg)]()
+
 A production-grade, modular AI decision engine that adds reasoning, emotion awareness, and safe control on top of LLMs for reliable responses.
 
+Turn any LLM into a reliable AI system with structured reasoning, emotional intelligence, and decision control.
+
 ---
+
+## Why this project
+
+Traditional LLM-based systems generate responses directly without control, leading to hallucinations, unsafe outputs, and inconsistent behavior.
+
+This project introduces a structured decision layer that:
+
+* Separates reasoning from generation
+* Adds emotional intelligence and risk awareness
+* Enables safe, controllable AI responses
+
+---
+
+## Use Cases
+
+* Customer support automation
+* AI chatbots with controlled behavior
+* Safety-critical AI systems
+* LLM-based assistants with decision logic
+* Multi-turn conversational systems
+
 
 ## Features
 
@@ -135,6 +163,9 @@ print(f"Strategy: {decision.strategy}")
 | contradiction_score | float (0-1) | Contradiction score  |
 
 ---
+
+
+
 
 ### Decision Fields
 
@@ -382,3 +413,4 @@ from ibtcode import IbtcodeSystem
 engine = IbtcodeSystem()
 response, state, decision = engine.process("Your message here")
 ```
+
