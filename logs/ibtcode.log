@@ -205,3 +205,4 @@
 2026-04-07 22:03:21.796 | DEBUG    | ibtcode.decision:decide:214 - Decision made: clarify → ask_question (conf: 0.67) - Uncertainty: 0.67, confused: 0.00
 2026-04-07 22:03:21.796 | DEBUG    | ibtcode.response:generate_response:58 - Response generated (clarify)
 2026-04-07 22:03:21.796 | DEBUG    | ibtcode.memory:push:26 - Memory: 1/10 turns stored.
+2026-04-29 02:43:53.021 | INFO     | ibtcode.system:__init__:30 - IbtcodeSystem initialised.
